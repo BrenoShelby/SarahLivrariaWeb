@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="images/logo.png">
+	<title>Histórico de Remessas</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/4cafcb1c1a.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/vendors/bootstrap-datepicker.standalone.min.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #262626;">
+		    <a class="navbar-brand">
+		    	<img src="images/logo.png" width="80" height="70" class="logo" alt="" loading="lazy">
+		    </a>
+			  
+		    <a href="login.html" class="logout">
+		  		<i class="fas fa-sign-out-alt  fa-2x"></i>
+		  	</a> 
+		</nav>
+	</header>
+	<main>
+		<div class="wrapper">
+			<nav class="sidebar mt-5">
+				<ul class="lisst-unstyled components">
+			      <li>
+					<a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-book-medical"></i>Livros
+					</a>
+					<ul class="collapse lisst-unstyled" id="bookSubmenu">
+						<li>
+							<a href="cadastroLivro.html"><i class="fas fa-file-alt"></i>Cadastro de livros</a>
+						</li>
+						<li>
+							<a href="pesquisaLivro.html"><i class="fas fa-search"></i>Pesquisa de livros</a>
+						</li>
+					</ul>
+				  </li>
+			      <li>
+					<a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-user"></i>Usuários
+					</a>
+					<ul class="collapse lisst-unstyled" id="userSubmenu">
+						<li>
+							<a href="cadastroUsuario.html"><i class="fas fa-file-alt"></i>Cadastro de usuários</a>
+						</li>
+						<li>
+							<a href="pesquisaUsuario.html"><i class="fas fa-search"></i>Pesquisa de usuários</a>
+						</li>
+					</ul>
+				  </li>
+				  <li>
+					<a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-truck"></i>Fornecedores
+					</a>
+					<ul class="collapse lisst-unstyled" id="supplierSubmenu">
+						<li>
+							<a href="cadastroFornecedor.html"><i class="fas fa-file-alt"></i>Cadastro de fornecedores</a>
+						</li>
+						<li>
+							<a href="pesquisaFornecedor.html"><i class="fas fa-search"></i>Pesquisa de fornecedores</a>
+						</li>
+					</ul>
+				  </li>
+			      <li><a class="nav-link" href="historicoRemessas.html"><i class="fas fa-history"></i>Histórico de remessas</a></li>
+			      <li><a class="nav-link" href="sobreNos.html"><i class="fas fa-question"></i>Sobre nós</a></li>
+			      
+			    </ul>
+			</nav>
+			<div class="main-content content-spacing">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 col-md-10">
+							<h1>Histórico de Remessas</h1>
+						</div>
+					</div>
+				</div>
+	
+			<div class="container-fluid">
+					<form class="my-5">
+						<div class="row">
+							 <div class="form-group col-sm-12 col-lg-8">
+							 	<label for="valorDe">Período</label>
+								<div class="form-inline">
+									<input id="periodoDe" type="text" class="mr-2 form-control aw-form-control-inline-sm js-date" data-provide="datepicker">
+									<label for="periodoAte" class="aw-form-label-between">Até</label>
+									<input id="periodoAte" type="text" class="ml-2 form-control aw-form-control-inline-sm js-date" data-provide="datepicker" autocomplete="off">
+								</div>
+							  </div>  
+						</div>
+
+						<button type="submit" class="btn btn-primary">Pesquisar</button>
+					</form>
+
+					<table class="table table-striped table-dark table-hover">
+					  <thead>
+					    <tr>
+					      <th scope="col">Código</th>
+					      <th scope="col">ISBN</th>
+					      <th scope="col">Título</th>
+					      <th scope="col">Autor</th>
+					      <th scope="col">Editora</th>
+					      <th scope="col">Data de cadastro</th>
+					      <th scope="col">Quantidade da remessa</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th>1</th>
+					      <td>978-85-950-8153-6</td>
+					      <td>O Homem Mais Rico da Babilônia</td>
+					      <td>George S.Clason</td>
+					      <td>Harpercollins</td>
+					      <td>05/03/2021</td>
+					      <td>100</td>	
+					    </tr>
+					    <tr>
+					      <th>2</th>
+					      <td>978-65-556-4060-1</td>
+					      <td>Warren Buffett e a análise de balanços</td>
+					      <td>Warren Buffett</td>
+					      <td>Arqueiro</td>
+					      <td>18/04/2021</td>
+					      <td>100</td>	
+					    </tr>
+					    <tr>
+					      <th>3</th>
+					      <td>978-65-556-4060-1</td>
+					      <td>Warren Buffett e a análise de balanços</td>
+					      <td>Warren Buffett</td>
+					      <td>Arqueiro</td>
+					      <td>28/05/2021</td>	
+					      <td>20</td>
+					    </tr>
+					    <tr>
+					      <th>4</th>
+					      <td>978-85-359-3004-7</td>
+					      <td>Guerra e Paz</td>
+					      <td>Leon Tolstói</td>
+					      <td>Grupo Companhia das Letras</td>
+					      <td>30/05/2021</td>
+					      <td>30</td>	
+					    </tr>
+					    <tr>
+					      <th>5</th>
+					      <td>978-85-359-3004-7</td>
+					      <td>Guerra e Paz</td>
+					      <td>Leon Tolstói</td>
+					      <td>Grupo Companhia das Letras</td>
+					      <td>30/06/2021</td>
+					      <td>39</td>	
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="js/vendors/jquery.mask.min.js"></script>
+<script src="js/vendors/jquery.maskMoney.min.js"></script>
+<script src="js/sarah.js"></script>
+<script src="js/vendors/bootstrap-datepicker.min.js"></script>
+</body>
+</html>

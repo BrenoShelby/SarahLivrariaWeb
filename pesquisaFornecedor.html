@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="images/logo.png">
+	<title>Pesquisa de Fornecedor</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/4cafcb1c1a.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #262626;">
+		    <a class="navbar-brand">
+		    	<img src="images/logo.png" width="80" height="70" class="logo" alt="" loading="lazy">
+		    </a>
+			  
+		    <a href="login.html" class="logout">
+		  		<i class="fas fa-sign-out-alt  fa-2x"></i>
+		  	</a> 
+		</nav>
+	</header>
+	<main>
+		<div class="wrapper">
+			<nav class="sidebar mt-5">
+				<ul class="lisst-unstyled components">
+			      <li>
+					<a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-book-medical"></i>Livros
+					</a>
+					<ul class="collapse lisst-unstyled" id="bookSubmenu">
+						<li>
+							<a href="cadastroLivro.html"><i class="fas fa-file-alt"></i>Cadastro de livros</a>
+						</li>
+						<li>
+							<a href="pesquisaLivro.html"><i class="fas fa-search"></i>Pesquisa de livros</a>
+						</li>
+					</ul>
+				  </li>
+			      <li>
+					<a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-user"></i>Usuários
+					</a>
+					<ul class="collapse lisst-unstyled" id="userSubmenu">
+						<li>
+							<a href="cadastroUsuario.html"><i class="fas fa-file-alt"></i>Cadastro de usuários</a>
+						</li>
+						<li>
+							<a href="pesquisaUsuario.html"><i class="fas fa-search"></i>Pesquisa de usuários</a>
+						</li>
+					</ul>
+				  </li>
+				  <li>
+					<a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-truck"></i>Fornecedores
+					</a>
+					<ul class="collapse lisst-unstyled" id="supplierSubmenu">
+						<li>
+							<a href="cadastroFornecedor.html"><i class="fas fa-file-alt"></i>Cadastro de fornecedores</a>
+						</li>
+						<li>
+							<a href="pesquisaFornecedor.html"><i class="fas fa-search"></i>Pesquisa de fornecedores</a>
+						</li>
+					</ul>
+				  </li>
+			      <li><a class="nav-link" href="historicoRemessas.html"><i class="fas fa-history"></i>Histórico de remessas</a></li>
+			      <li><a class="nav-link" href="sobreNos.html"><i class="fas fa-question"></i>Sobre nós</a></li>
+			      
+			    </ul>
+			</nav>
+			<div class="main-content content-spacing">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 col-lg-10">
+							<h1>Pesquisa de Fornecedores</h1>
+						</div>
+						<div class="col-sm-12 col-lg-2">
+							<div class="d-flex justify-content-end">
+								<a type="button" href="cadastroFornecedor.html" class="btn btn-primary add-button"><i class="fas fa-plus-circle"></i>Novo Fornecedor</a>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			<div class="container-fluid">
+					<form class="my-5">
+						<div class="row">
+							 <div class="form-group col-sm-12 col-lg-8">
+							    <label for="nome">Nome Fantasia</label>
+							    <input type="text" class="form-control" id="nome">
+							  </div>
+							  <div class="form-group col-sm-12 col-lg-4">
+							    <label for="cnpj">CNPJ</label>
+							    <input type="text" class="form-control" id="cnpj">
+							  </div>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Pesquisar</button>
+					</form>
+
+					<table class="table table-striped table-dark table-hover">
+					  <thead>
+					    <tr>
+					      <th scope="col">Código</th>
+					      <th scope="col">Razão Social</th>
+					      <th scope="col">Nome Fantasia</th>
+					      <th scope="col">CNPJ</th>
+					      <th scope="col">Telefone</th>
+					      <th scope="col">E-mail</th>
+					      <th scope="col">Bairro</th>
+					      <th scope="col"></th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th>1</th>
+					      <td>Editora Schwarcz S.A.</td>
+					      <td>Grupo Companhia das Letras</td>
+					      <td>55.789.390/0008-99</td>
+					      <td>(11)3707-3500</td>
+					      <td>contabilidade@companhiadasletras.com.br</td>
+					      <td>Itaim Bibi</td>
+					      <td class="text-right">
+								<a href="edicaoFornecedor.html" class="btn btn-link btn-xs js-tooltip"  title="Editar">
+									<i class="fas fa-pencil-alt"></i>
+								</a>
+								<a class="btn btn-link btn-xs"  title="Excluir">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+						   </td>	
+					    </tr>
+					    <tr>
+					      <th>2</th>
+					      <td>Harpercollins Brasil Holdings Participacoes</td>
+					      <td>Harpercollins Brasil</td>
+					      <td>22.016.633/0001-20</td>
+					      <td>(11)3882-8200</td>
+					      <td>fiscal@ediouro.com.br</td>
+					      <td>Cerqueira César</td>
+					      <td class="text-right">
+								<a href="edicaoFornecedor.html" class="btn btn-link btn-xs js-tooltip"  title="Editar">
+									<i class="fas fa-pencil-alt"></i>
+								</a>
+								<a class="btn btn-link btn-xs"  title="Excluir">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+						   </td>	
+					    </tr>
+					    <tr>
+					      <th>3</th>
+					      <td>Editora Arqueiro LTDA</td>
+					      <td>Editora Arqueiro LTDA</td>
+					      <td>06.985.027/0005-90</td>
+					      <td>(11)3292-5076</td>
+					      <td>helena@sextante.com.br</td>
+					      <td>Jardim São Geraldo</td>
+					      <td class="text-right">
+								<a href="edicaoFornecedor.html" class="btn btn-link btn-xs js-tooltip"  title="Editar">
+									<i class="fas fa-pencil-alt"></i>
+								</a>
+								<a class="btn btn-link btn-xs"  title="Excluir">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+						   </td>	
+					    </tr>
+					    <tr>
+					      <th>4</th>
+					      <td>Editora FTD S.A </td>
+					      <td>FTD Educação</td>
+					      <td>61.186.490/0001-57</td>
+					      <td>(11)3598-6000</td>
+					      <td>fiscal@ftd.com.br</td>
+					      <td>Bela Vista</td>
+					      <td class="text-right">
+								<a href="edicaoFornecedor.html" class="btn btn-link btn-xs js-tooltip"  title="Editar">
+									<i class="fas fa-pencil-alt"></i>
+								</a>
+								<a class="btn btn-link btn-xs"  title="Excluir">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+						   </td>	
+					    </tr>
+					    <tr>
+					      <th>5</th>
+					      <td>Editora Moderna LTDA</td>
+					      <td>Editora Moderna LTDA</td>
+					      <td>62.136.304/0001-38</td>
+					      <td>(11)2790-1300</td>
+					      <td>pgomes@santillana.com</td>
+					      <td>Tatuapé</td>
+					      <td class="text-right">
+								<a href="edicaoFornecedor.html" class="btn btn-link btn-xs js-tooltip"  title="Editar">
+									<i class="fas fa-pencil-alt"></i>
+								</a>
+								<a class="btn btn-link btn-xs"  title="Excluir">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+						   </td>	
+					    </tr>
+					    <tr>
+					      <th>6</th>
+					      <td>Editora Globo S/A</td>
+					      <td>Editora Globo</td>
+					      <td>04.067.191/0001-60</td>
+					      <td>(11)2534-5000</td>
+					      <td>tributario@infoglobo.com.br</td>
+					      <td>Jardim Paulista</td>
+					      <td class="text-right">
+								<a href="edicaoFornecedor.html" class="btn btn-link btn-xs js-tooltip"  title="Editar">
+									<i class="fas fa-pencil-alt"></i>
+								</a>
+								<a class="btn btn-link btn-xs"  title="Excluir">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+						   </td>	
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="js/vendors/jquery.mask.min.js"></script>
+<script src="js/vendors/jquery.maskMoney.min.js"></script>
+<script src="js/sarah.js"></script>
+</body>
+</html>

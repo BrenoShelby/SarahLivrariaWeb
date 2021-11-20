@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="images/logo.png">
+	<title>Cadastro de Usuário</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/4cafcb1c1a.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link href="css/vendors/bootstrap-switch.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #262626;">
+		    <a class="navbar-brand">
+		    	<img src="images/logo.png" width="80" height="70" class="logo" alt="" loading="lazy">
+		    </a>
+			  
+		    <a href="login.html" class="logout">
+		  		<i class="fas fa-sign-out-alt  fa-2x"></i>
+		  	</a> 
+		</nav>
+	</header>
+	<main>
+		<div class="wrapper">
+			<nav class="sidebar mt-5">
+				<ul class="lisst-unstyled components">
+			      <li>
+					<a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-book-medical"></i>Livros
+					</a>
+					<ul class="collapse lisst-unstyled" id="bookSubmenu">
+						<li>
+							<a href="cadastroLivro.html"><i class="fas fa-file-alt"></i>Cadastro de livros</a>
+						</li>
+						<li>
+							<a href="pesquisaLivro.html"><i class="fas fa-search"></i>Pesquisa de livros</a>
+						</li>
+					</ul>
+				  </li>
+			      <li>
+					<a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-user"></i>Usuários
+					</a>
+					<ul class="collapse lisst-unstyled" id="userSubmenu">
+						<li>
+							<a href="cadastroUsuario.html"><i class="fas fa-file-alt"></i>Cadastro de usuários</a>
+						</li>
+						<li>
+							<a href="pesquisaUsuario.html"><i class="fas fa-search"></i>Pesquisa de usuários</a>
+						</li>
+					</ul>
+				  </li>
+				  <li>
+					<a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+						<i class="fas fa-truck"></i>Fornecedores
+					</a>
+					<ul class="collapse lisst-unstyled" id="supplierSubmenu">
+						<li>
+							<a href="cadastroFornecedor.html"><i class="fas fa-file-alt"></i>Cadastro de fornecedores</a>
+						</li>
+						<li>
+							<a href="pesquisaFornecedor.html"><i class="fas fa-search"></i>Pesquisa de fornecedores</a>
+						</li>
+					</ul>
+				  </li>
+			      <li><a class="nav-link" href="historicoRemessas.html"><i class="fas fa-history"></i>Histórico de remessas</a></li>
+			      <li><a class="nav-link" href="sobreNos.html"><i class="fas fa-question"></i>Sobre nós</a></li>
+			      
+			    </ul>
+			</nav>
+			<div class="main-content content-spacing">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 col-lg-10">
+							<h1>Cadastro de Usuários</h1>
+						</div>
+						<div class="col-sm-12 col-lg-2">
+							<div class="d-flex justify-content-end">
+								<a href="pesquisaUsuario.html" class="btn btn-primary">Pesquisa</a>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			<div class="container-fluid">
+					<form class="my-5">
+						<div class="form-group">
+							<label for="nome" class="control-label">Nome</label>
+							<input type="text" id="nome" class="form-control" required>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12 col-lg-6 form-group" >
+								<label for="email" class="control-label">E-mail</label>
+								<input type="text" id="email" class="form-control" required>
+							</div>
+							<div class="col-sm-12 col-lg-3 form-group">
+								<label for="cpf" class="control-label">CPF</label>
+								<input type="text" id="cpf" class="form-control" required>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12 col-lg-3 form-group">
+								<label for="senha" class="control-label">Senha</label>
+								<input type="password" id="senha" class="form-control" required>
+							</div>
+							<div class="col-sm-12 col-lg-3 form-group">
+								<label for="confirmacaoSenha" class="control-label">Confirmação de senha</label>
+								<input type="password" id="confirmacaoSenha" class="form-control" required>
+							</div>
+							<div class="col-sm-12 col-lg-3 form-group">
+								<label class="control-label">Status</label>
+								<div>
+									<input type="checkbox" name="my-checkbox" data-off-color="danger" checked>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-lg-6 form-group">
+								<label class="control-label">Grupos</label> 
+								
+								<div>
+			  						<div class="checkbox  checkbox-inline" style="margin-top: 8px">
+				    					<input  id="grupo_adm" type="checkbox" value="1" name="grupos"/>
+				    					<label  for="grupo_adm">Administrador</label>
+
+				    					<input  id="grupo_func" type="checkbox" value="2" name="grupos"/>
+				    					<label  for="grupo_func">Funcionário</label>
+			    					</div>
+								</div>
+							</div>
+						</div>
+						
+					 <button type="submit" class="btn btn-primary">Salvar</button>
+					 
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<footer>
+		
+	</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/vendors/jquery.mask.min.js"></script>
+<script src="js/vendors/jquery.maskMoney.min.js"></script>
+<script src="js/sarah.js"></script>
+<script src="js/vendors/bootstrap-switch.js"></script>
+<script>
+	$("[name='my-checkbox']").bootstrapSwitch();	
+</script>
+</body>
+</html>
