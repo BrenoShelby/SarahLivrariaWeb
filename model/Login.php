@@ -24,7 +24,7 @@ class Login
         $this->senha = $senha;
     }
 
-    function fazerLogin($user, $password)
+    function login($user, $password)
     {
         // Inicia a sessão
         session_start();
@@ -48,7 +48,7 @@ class Login
         }
         }
 
-   function fazerLogout()
+   function logout()
     {
         session_start();
         session_destroy();

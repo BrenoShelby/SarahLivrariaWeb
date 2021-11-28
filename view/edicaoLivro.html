@@ -34,10 +34,10 @@
 					</a>
 					<ul class="collapse lisst-unstyled" id="bookSubmenu">
 						<li>
-							<a href="cadastroLivro.html"><i class="fas fa-file-alt"></i>Cadastro de livros</a>
+							<a href="../view/cadastroLivro.html"><i class="fas fa-file-alt"></i>Cadastro de livros</a>
 						</li>
 						<li>
-							<a href="pesquisaLivro.html"><i class="fas fa-search"></i>Pesquisa de livros</a>
+							<a href="../view/pesquisaLivro.html"><i class="fas fa-search"></i>Pesquisa de livros</a>
 						</li>
 					</ul>
 				  </li>
@@ -47,10 +47,10 @@
 					</a>
 					<ul class="collapse lisst-unstyled" id="userSubmenu">
 						<li>
-							<a href="cadastroUsuario.html"><i class="fas fa-file-alt"></i>Cadastro de usuários</a>
+							<a href="../view/cadastroUsuario.html"><i class="fas fa-file-alt"></i>Cadastro de usuários</a>
 						</li>
 						<li>
-							<a href="pesquisaUsuario.html"><i class="fas fa-search"></i>Pesquisa de usuários</a>
+							<a href="../view/pesquisaUsuario.html"><i class="fas fa-search"></i>Pesquisa de usuários</a>
 						</li>
 					</ul>
 				  </li>
@@ -60,15 +60,15 @@
 					</a>
 					<ul class="collapse lisst-unstyled" id="supplierSubmenu">
 						<li>
-							<a href="cadastroFornecedor.html"><i class="fas fa-file-alt"></i>Cadastro de fornecedores</a>
+							<a href="../view/cadastroFornecedor.html"><i class="fas fa-file-alt"></i>Cadastro de fornecedores</a>
 						</li>
 						<li>
-							<a href="pesquisaFornecedor.html"><i class="fas fa-search"></i>Pesquisa de fornecedores</a>
+							<a href="../view/pesquisaFornecedor.html"><i class="fas fa-search"></i>Pesquisa de fornecedores</a>
 						</li>
 					</ul>
 				  </li>
-			      <li><a class="nav-link" href="historicoRemessas.html"><i class="fas fa-history"></i>Histórico de remessas</a></li>
-			      <li><a class="nav-link" href="sobreNos.html"><i class="fas fa-question"></i>Sobre nós</a></li>
+			      <li><a class="nav-link" href="../view/historicoRemessas.html"><i class="fas fa-history"></i>Histórico de remessas</a></li>
+			      <li><a class="nav-link" href="../view/sobreNos.html"><i class="fas fa-question"></i>Sobre nós</a></li>
 			      
 			    </ul>
 			</nav>
@@ -80,43 +80,43 @@
 						</div>
 						<div class="col-sm-12 col-md-2">
 							<div class="d-flex justify-content-end">
-								<a href="pesquisaLivro.html" class="btn btn-primary">Pesquisa</a>
+								<a href="../view/pesquisaLivro.html" class="btn btn-primary">Pesquisa</a>
 							</div>
 						</div>
 					</div>
 				</div>
 	
 			<div class="container-fluid">
-					<form class="my-5">
+					<form method="post" action="../controller/controllerBook.php" class="my-5">
 						<div class="row">
 							 <div class="form-group col-sm-12 col-lg-8">
 							    <label for="titulo">Título</label>
-							    <input type="text" class="form-control" id="titulo" value="O Homem Mais Rico da Babilônia">
+							    <input name="titulo" type="text" class="form-control" id="titulo" value="O Homem Mais Rico da Babilônia">
 							  </div>
 							  <div class="form-group col-sm-12 col-lg-4">
 							    <label for="isbn">ISBN</label>
-							    <input type="text" class="form-control" id="isbn" value="978-85-950-8153-6">
+							    <input name="isbn" type="text" class="form-control" id="isbn" value="978-85-950-8153-6">
 							  </div>
 						</div>
 						<div class="row">
 							 <div class="form-group col-sm-12 col-lg-6">
 							    <label for="autor">Autor</label>
-							    <input type="text" class="form-control" id="autor" value="George S.Clason">
+							    <input name="autor" type="text" class="form-control" id="autor" value="George S.Clason">
 							  </div>
 							  <div class="form-group col-sm-12 col-lg-3">
 							    <label for="editora">Editora</label>
-							    <select id="editora" class="form-control" >
+							    <select name="editora" id="editora" class="form-control" >
 							    	<option value="">Selecione a editora</option>
-							    	<option value="1" selected="selected">Harpercollins</option>
-							    	<option value="2">Arqueiro</option>
-							    	<option value="3">Cia das Letras</option>
-							    	<option value="4">Editora Globo</option>
-							    	<option value="5">L&PM</option>
+							    	<option value="Harpercollins" selected="selected">Harpercollins</option>
+							    	<option value="Arqueiro">Arqueiro</option>
+							    	<option value="Cia das Letras">Cia das Letras</option>
+							    	<option value="Editora Globo">Editora Globo</option>
+							    	<option value="L&PM">L&PM</option>
 							    </select>
 							  </div>
 							  <div class="form-group col-sm-12 col-lg-3">
 							    <label for="acabamento">Acabamento</label>
-							    <select id="acabamento" class="form-control">
+							    <select name="acabamento" id="acabamento" class="form-control">
 							    	<option value="">Selecione o acabamento</option>
 							    	<option value="">Capa dura</option>
 							    	<option value="" selected="selected">Brochura</option>
@@ -128,50 +128,44 @@
 						<div class="row">
 							 <div class="form-group col-sm-12 col-lg-4">
 							    <label for="ano-edicao">Ano de edição</label>
-							    <input type="text" class="form-control js-int" id="ano-edicao" value="2017">
+							    <input name="ano_edicao" type="text" class="form-control js-int" id="ano-edicao" value="2017">
 							  </div>
 
 							  
 							  <div class="form-group col-sm-12 col-lg-4">
 							    <label for="preco">Preço</label>
-							    <input type="text" class="form-control js-decimal" id="preco" placeholder="R$" value="24,90">
+							    <input name="preco" type="text" class="form-control js-decimal" id="preco" placeholder="R$" value="24,90">
 							  </div>
 								  
 							  
 							  <div class="form-group col-sm-12 col-lg-4">
 							    <label for="quantidade">Quantidade</label>
-							    <input type="text" class="form-control js-int" id="quantidade" value="184">
+							    <input name="quantidade" type="text" class="form-control js-int" id="quantidade" value="184">
 							  </div>
 						</div>
 
 						<div class="row">
 							<div class="form-group col-sm-12">
 							    <label for="exampleFormControlTextarea1">Descrição</label>
-							    <textarea class="form-control" id="exampleFormControlTextarea1" cols="10" rows="7">Com mais de dois milhões de exemplares vendidos no mundo todo, “O homem mais rico da Babilônia” é um clássico sobre como multiplicar riqueza e solucionar problemas financeiros. Baseando-se nos segredos de sucesso dos antigos babilônicos — os habitantes da cidade mais rica e próspera de seu tempo —, George S. Clason mostra soluções ao mesmo tempo sábias e muito atuais para evitar a falta de dinheiro, como não desperdiçar recursos durante tempos de opulência, buscar conhecimento e informação em vez de apenas lucro, assegurar uma renda para o futuro, manter a pontualidade no pagamento de dívidas e, sobretudo, cultivar as próprias aptidões, tornando-se cada vez mais habilidoso e consciente.</textarea>
+							    <textarea name="descricao" class="form-control" id="exampleFormControlTextarea1" cols="10" rows="7">Com mais de dois milhões de exemplares vendidos no mundo todo, “O homem mais rico da Babilônia” é um clássico sobre como multiplicar riqueza e solucionar problemas financeiros. Baseando-se nos segredos de sucesso dos antigos babilônicos — os habitantes da cidade mais rica e próspera de seu tempo —, George S. Clason mostra soluções ao mesmo tempo sábias e muito atuais para evitar a falta de dinheiro, como não desperdiçar recursos durante tempos de opulência, buscar conhecimento e informação em vez de apenas lucro, assegurar uma renda para o futuro, manter a pontualidade no pagamento de dívidas e, sobretudo, cultivar as próprias aptidões, tornando-se cada vez mais habilidoso e consciente.</textarea>
 							 </div>
 						</div>
 
-					 <button type="submit" class="btn btn-primary">Salvar</button>
+					 <button name="update" type="submit" class="btn btn-primary">Salvar</button>
 					 
 					</form>
 
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
 	</main>
 	<footer>
 		
 	</footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<script src="js/vendors/jquery.mask.min.js"></script>
-<script src="js/vendors/jquery.maskMoney.min.js"></script>
-<script src="js/sarah.js"></script>
+<script src="../js/vendors/jquery.mask.min.js"></script>
+<script src="../js/vendors/jquery.maskMoney.min.js"></script>
+<script src="../js/sarah.js"></script>
 </body>
 </html>
